@@ -9,7 +9,7 @@ export default function Header() {
         <h1 className="text-red-500 text-md font-bold">Foodio</h1>
       </div>
       <div>
-        <button className="text-black bg-red-500 p-2 rounded-lg text-md">Cart 0</button>
+        <button className="text-black bg-red-500 hover:bg-red-400 p-2 rounded-lg text-md">Cart 0</button>
       </div>
     </header>
   );
