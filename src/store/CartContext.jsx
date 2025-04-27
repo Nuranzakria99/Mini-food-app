@@ -5,7 +5,7 @@ export const CartContext = createContext();
 
 function cartReducer(state, action) {
   if (action.type === 'ADD_TO_CART') {
-    const existingItemIndex = state.items.find((item) => item.id === action.item.id);
+    const existingItemIndex = state.items.findIndex((item) => item.id === action.item.id);
 
     const updatedItems = [...state.items];
 
