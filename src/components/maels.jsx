@@ -1,6 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { CartContext } from "../store/CartContext";
+
+
 
 export default function Meals() {
+  const Context = useContext(CartContext)
+  function AddItemToCard(meal){
+    Context.addItem(meal)
+  }
   const [meals, setMeals] = useState([]);
 
   useEffect(() => {
@@ -34,7 +41,7 @@ export default function Meals() {
         <h2 className="text-xl font-bold text-center">{meal.name}</h2>
         <p className="text-gray-500 text-center">{meal.description}</p>
         <p className="text-green-600 font-semibold mt-2">${meal.price}</p>
-        <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-400">
+        <button onClick={() => AddItemToCard(meal)} className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-400">
           Add to Cart
         </button>
       </div>
