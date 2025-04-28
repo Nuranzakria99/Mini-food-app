@@ -14,7 +14,7 @@ export default function Meals() {
 
       if (!res.ok) {
         
-        console.error('Failed to fetch meals.');
+        console.error('Failed to fetch meals');
         return;
       }
 

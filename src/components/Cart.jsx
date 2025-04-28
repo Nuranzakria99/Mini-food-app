@@ -3,7 +3,6 @@ import Model from "./Model";
 import { CartContext } from "../store/CartContext";
 import ControlCartContext from "../store/ControlCartContext";
 import { useContext } from "react";
-
 export default function Cart() {
   const contexItems = useContext(CartContext);
   const ControlContext = useContext(ControlCartContext);
